@@ -24,6 +24,7 @@ A la hora de crear un repositorio nos pedirá varias cosas, siendo las peticione
 - Breve descripción
 - Si será un repositorio público o privado
 - Si se le quiere añadir un ReadMe o no (en este punto lo mejor siempre es añadirle uno, porque sino luego hay que hacer más cosas para poder trabajar en el repositorio)
+
 Una vez todo escrito y seleccionado, solamente quedará darle a crear el repositorio, así ya nos aparecerá el repositorio en nuestra cuenta.
 
 <div id='id2' />

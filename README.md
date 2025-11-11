@@ -48,3 +48,49 @@ Hecho todo esto, ya tendrás el commit enviado de tu local al GitHub.
 <div id='id3' />
 
 ### Markdown
+---
+
+Markdown es un lenguaje de marcas ligero que permite crear documentos con formato de manera sencilla y legible. Se usa mucho en archivos README, documentación y foros.
+
+Ahora haré una explicación básica con sus respectivos ejemplos de etiquetas comunes:
+- **Encabezados**
+
+Las almohadillas (#) se utilizan al principio de una línea, seguido de un espacio (así funcionará), para poder hacer encabezados, como ya he hecho con el índice, markdown, etc.
+Un ejemplo de esto sería: `# Hola mundo`, esto lo que haría sería hacer en un encabezado h1 ese escrito.
+Se pueden utilizar hasta 6 almohadillas a la vez, si se utiliza solo una será más grande y si se utilizan las 6 será cada vez más pequeño.
+
+- **Negrita y cursiva**
+
+Para la negrita y cursiva se utilizan los asteriscos o guiones bajos, dependiendo de lo que se quiera hacer se utilizarán más o menos.
+Para la **negrita** se puede hacer con dos asteríscos `**negrita**` o con dos guiones bajos `__negrita__`
+Por otro lado, para la _cursiva_ se utiliza o un asterísco `*cursiva*` o un guion bajo `_cursiva_`
+Si se quieren utilizar las dos a la vez, hay dos formas distintas, la primera sería utilizar tres asteríscos `***negrita y cursiva***`. La otra forma sería utilizando los asteriscos y guiones, justo así `**_negrita y cursiva_**`.
+
+- **Listas desordenadas**
+
+Para las listas desordenadas se utilizará el guion al inicio, seguido de un espacio para separar la marca del texto. No pondré ejemplo pero es lo que estoy haciendo para separar cada punto del markdown.
+
+- **Listas ordenadas**
+
+Para las listas ordenadas se utilizarán los números de forma autonumérica, es decir, si se empieza con un 1. el siguiente no puede ser un 3.
+Ejemplo de una lista ordenada:
+1. Hacer el repositorio
+2. Clonar el repositorio al local
+3. Empezar a escribir en el Visual Studio Code
+
+- **Tablas**
+
+Las tablas se crean usando | y -:
+
+| Nombre   | Edad | Ciudad     |
+|----------|------|------------|
+| Ana      | 23   | Madrid     |
+| Luis     | 31   | Barcelona  |
+| Carmen   | 27   | Valencia   |
+
+`| Nombre   | Edad | Ciudad     |`
+`|----------|------|------------|`
+`| Ana      | 23   | Madrid     |`
+`| Luis     | 31   | Barcelona  |`
+`| Carmen   | 27   | Valencia   |`
+

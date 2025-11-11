@@ -89,8 +89,12 @@ Las tablas se crean usando | y -:
 | Carmen   | 27   | Valencia   |
 
 `| Nombre   | Edad | Ciudad     |`
+
 `|----------|------|------------|`
+
 `| Ana      | 23   | Madrid     |`
+
 `| Luis     | 31   | Barcelona  |`
+
 `| Carmen   | 27   | Valencia   |`
 

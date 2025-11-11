@@ -11,4 +11,6 @@
 ### GitHub
 ---
 
-<img src="">
+<p align="center">
+	<img src="img/github-logo.jpg" alt="GitHub logo" style="max-width:360px; width:60%; height:auto;">
+</p>

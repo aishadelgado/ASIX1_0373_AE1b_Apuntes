@@ -3,7 +3,7 @@
 ## Índice
 1. **[GitHub](#id1)**
 2. **[Git](#id2)**
-3. **Markdown**
+3. **[Markdown](#id3)**
 4. **HTML**
 
 <div id='id1' />
@@ -31,3 +31,20 @@ Una vez todo escrito y seleccionado, solamente quedará darle a crear el reposit
 
 ### Git
 ---
+
+Git se utiliza principalmente para gestionar el historial de cambios en archivos de código fuente, permitiendo que múltiples desarrolladores colaboren en un proyecto de manera simultánea.
+En nuestro caso lo utilizaremos para poder hacer todos los commits que vayamos haciendo en el Visual Studio Code.
+Primero que nada se tendrá que instalar el Git para poder hacerlo funcionar en el cmd.
+
+Una vez instalado, los comandos que se tendrán que utilizar serán los siguientes:
+- _git clone_: Este comando, seguido de la url de nuestro repositorio, creará una carpeta clonada del repositorio.
+- _git init_: Este comando nos servirá para inicializar la carpeta que se vaya a utilizar en el momento, así los próximos comandos de git que se utilicen irán directamente a esa carpeta.
+- _git add_: Esto nos servirá para que, después de cambiar, añadir o eliminar cosas en nuestro visual, este comando lo encuentre. Para que haga todo se deberá utilizar un punto al final ".".
+- _git commit -m_: Este comando nos servirá para hacer los commits que irán a parar a nuestro repositorio. Para escribirle un título al commit se tendrá que escribir entre comillas.
+- _git push origin main_: Este es el comando que hace que los commits terminen en el github.
+
+Hecho todo esto, ya tendrás el commit enviado de tu local al GitHub.
+
+<div id='id3' />
+
+### Markdown

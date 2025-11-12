@@ -4,7 +4,7 @@
 1. **[GitHub](#id1)**
 2. **[Git](#id2)**
 3. **[Markdown](#id3)**
-4. **HTML**
+4. **[HTML](#id4)**
 
 <div id='id1' />
 
@@ -98,3 +98,69 @@ Las tablas se crean usando | y -:
 
 `| Carmen   | 27   | Valencia   |`
 
+
+<div id='id4' />
+
+### HTML
+---
+
+HTML es el lenguaje de marcas estándar para crear páginas web. El lenguaje más importante de internet dado que sin HTML no se vería nada en el navegador.
+
+- **Estructura básica**
+
+`<!DOCTYPE html>`
+`<html lang="en">`
+`<head>`
+    `<meta charset="UTF-8">`
+    `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+    `<title>Document</title>`
+`</head>`
+`<body>`  
+`</body>`
+`</html>`
+
+- **Elementos de bloque y línea**
+Dentro del cuerpo del documento debemos incluir todo el contenido de la web, es decir, la información que queremos que vea el usuario final de la aplicación web. Disponemos de diferentes elementos que, con sus atributos, nos permitirán conseguir ese objetivo.
+
+- **Etiquetas básicas de HTML**
+
+**Encabezados**
+Los encabezados se escriben con `<h1>` (siendo este el más grande) hasta `<h6>`(siendo este el más pequeño)
+
+**Párrafo**
+Los parrafos y todo lo que se quiera escribir dentro deben ir con `<p>`.
+
+**Salto de línea**
+El salto de línea se hace con `<hr>`.
+
+**Cursiva**
+La cursiva se hace con `<em>`.
+
+**Negrita**
+La negrita se hace con `<strong>`.
+
+- **Etiquetas de formularios**
+
+`<form>` Se utiliza para crear formularios que permiten al usuario enviar datos a un servidor o realizar alguna acción en una página web.
+
+`<input>` Se utiliza para crear diversos tipos de campos interactivos en un formulario.
+
+`<select>` Se utiliza para crear menús desplegables en los formularios.
+
+`<option>` Permite al usuario seleccionar una opción de una lista de opciones predefinidas.
+
+`<button>` Se utiliza para crear varios tipos de botones interactivos en un formulario o en una página web.
+
+- **Etiquetas de tabla**
+
+`<table>` Define el inicio de una tabla en HTML.
+
+`<thead>` Agrupa el encabezado de la tabla, normalmente contiene las etiquetas `<th>`.
+
+`<tbody>` Agrupa los cuerpos de la tabla. Útil para separar el contenido del encabezado y pie.
+
+`<tfoot>` Agrupa el pie de la tabla, generalmente utilizado para resumen o información final.
+
+`<td>` Se usa para definir una celda de datos.
+
+`<tr>` Se usa para definir una fila de celdas en una tabla.

@@ -5,6 +5,7 @@
 2. **[Git](#id2)**
 3. **[Markdown](#id3)**
 4. **[HTML](#id4)**
+5. **[CSS](#id5)**
 
 <div id='id1' />
 
@@ -33,6 +34,7 @@ En clase creamos una cuenta de GitHub (algunos ya la teníamos de SMX). Para cre
 Una vez todo escrito y seleccionado, solamente quedará darle a crear el repositorio, así ya nos aparecerá el repositorio en nuestra cuenta.
 
 ---
+<div id='id2' />
 
 ## Git
 
@@ -83,8 +85,9 @@ Una vez instalado, los comandos que se tendrán que utilizar serán los siguient
 Hecho todo esto, ya tendrás el commit enviado de tu local al GitHub.
 
 ---
+<div id='id3' />
 
-### Markdown
+## Markdown
 
 Markdown es un lenguaje de marcas ligero que permite crear documentos con formato de manera sencilla y legible. Se usa mucho en archivos README, documentación y foros.
 
@@ -130,7 +133,7 @@ Cuantas más almohadillas (máximo 6), más pequeño será el encabezado.
 3. Empezar a escribir en Visual Studio Code
 ````
 
- Tablas
+### Tablas
 
 Se crean usando barras verticales `|` y guiones `-`:
 ````markdown
@@ -150,6 +153,7 @@ Resultado:
 | Carmen   | 27   | Valencia   |
 
 ---
+<div id='id4' />
 
 ## HTML
 
@@ -246,3 +250,59 @@ HTML es el lenguaje de marcas estándar para crear páginas web. El lenguaje má
 - `<tr>`: Fila de la tabla
 - `<th>`: Celda de encabezado
 - `<td>`: Celda de datos
+
+---
+<div id='id5' />
+
+## Introducción a CSS
+
+CSS (Cascading Style Sheets) es el lenguaje que se utiliza para dar estilo y diseño a las páginas web creadas con HTML. Mientras HTML define la estructura y el contenido, CSS controla cómo se ve ese contenido.
+
+### Características principales de CSS
+
+- **Separación de contenido y presentación**: Permite mantener el HTML limpio enfocado en la estructura
+- **Reutilización de estilos**: Esto consigue que un mismo estilo pueda aplicarse a múltiples elementos
+- **Control preciso del diseño**: Ofrece propiedades para controlar colores, tipografías, espaciados, posicionamiento y mucho más
+- **Diseño responsive**: Permite adaptar la web a diferentes tamaños de pantalla mediante media queries
+- **Cascada y especificidad**: Los estilos se aplican según reglas de prioridad y herencia
+
+### Formas de aplicar CSS
+
+**CSS en línea (inline)** - Este CSS aparece justo en la etiqueta del HTML que se quiere cambiar:
+```html
+Texto azul
+```
+
+**CSS interno** - Este CSS aparece en el head con la etiqueta `<style>`, es parecido al CSS externo pero este se encuentra en el HTML:
+```html
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+```
+
+**CSS externo (archivo separado)** - Se crea un .css a parte y se enlaza desde el HTML:
+```html
+<head>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+```
+### Box Model
+
+Todos los elementos HTML son cajas rectangulares compuestas por:
+
+- **Content**: El contenido del elemento (texto, imagen, etc.)
+- **Padding**: Espacio interior entre el contenido y el borde
+- **Border**: El borde de la caja
+- **Margin**: Espacio exterior que separa la caja de otros elementos
+
+```css
+div {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+```

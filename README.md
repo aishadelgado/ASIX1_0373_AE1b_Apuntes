@@ -6,6 +6,7 @@
 3. **[Markdown](#id3)**
 4. **[HTML](#id4)**
 5. **[CSS](#id5)**
+5. **[Responsive](#id6)**
 
 <div id='id1' />
 
@@ -259,7 +260,7 @@ HTML no es un lenguaje de programación, ya que no ejecuta lógica ni cálculos.
 ---
 <div id='id5' />
 
-## Introducción a CSS
+## CSS
 
 En los orígenes de la web, HTML era muy sencillo y fácil de aprender y no era capaz de representar recursos gráficos para añadir a la información textual. Eso fue cambiando a medida que el número de sitios web fueron creciendo y con ellos la cantidad de etiquetas que HTML se necesitaba para construir sitios cada vez más atractivos. Se tenían que incluir nuevas etiquetas destinadas a conseguir efectos visuales.
 
@@ -330,7 +331,7 @@ La cascada determina qué regla se aplica cuando múltiples reglas coinciden con
 
 La especificidad es un sistema de puntuación que determina qué selector tiene más peso cuando hay conflicto. Se calcula como una combinación de cuatro valores: inline, IDs, Classes, Elements.
 
-##### Reglas de prioridad
+#### Reglas de prioridad
 
 - **De mayor a menor prioridad:**
 
@@ -441,7 +442,7 @@ div {
 }
 ```
 
-#### Margin (Margen)
+#### Margin
 
 El margin es el espacio externo que rodea a un elemento y lo separa de otros elementos dentro de la página. A diferencia del padding y del border, el margin no forma parte del área visible del elemento y no tiene color de fondo, ya que es completamente transparente. Se utiliza para crear separación entre elementos, organizar mejor el diseño y evitar que los elementos queden demasiado juntos, mejorando así la estructura y la legibilidad de la interfaz.
 Ejemplo:
@@ -465,5 +466,35 @@ Ejemplo:
     padding: 20px;
     border: 5px solid black;
     box-sizing: content-box; /* Valor por defecto */
+}
+```
+
+---
+<div id='id6' />
+
+## Diseño Responsive
+
+El diseño responsive es una técnica de diseño web que permite que un sitio web se adapte automáticamente a diferentes tamaños de pantalla y dispositivos, como pueden ser: ordenadores, tabletas, teléfonos, etc.
+
+### ¿Qué es el diseño responsive?
+
+Un sitio web responsive cambia su diseño automáticamente según el tamaño de pantalla del dispositivo que lo visualiza. En lugar de crear versiones separadas para móvil, tablet y escritorio, se utiliza un único código HTML/CSS que se adapta dinámicamente.
+Su objetivo principal es proporcionar una experiencia de usuario óptima en cualquier dispositivo, sin importar su tamaño de pantalla.
+
+### Ventajas
+- **Experiencia de usuario mejorada**: El contenido se adapta al dispositivo
+- **Un solo código**: No necesitas mantener múltiples versiones del sitio
+- **Más económico**: No necesitas apps nativas separadas
+- **Preparado para el futuro**: Funciona en dispositivos nuevos automáticamente
+
+### Media Queries
+
+Las media queries son una característica de CSS que permite aplicar estilos diferentes a una página web según las características del dispositivo o la ventana del navegador (como el ancho, la altura, la orientación o la resolución de la pantalla).
+
+Son muy útiles para crear sitios web responsive, es decir, que estructuren su contenido para adaptarse automáticamente a distintos tamaños de pantalla.
+
+```css
+@media (condición) {
+    /* Estilos que se aplican solo si se cumple la condición */
 }
 ```

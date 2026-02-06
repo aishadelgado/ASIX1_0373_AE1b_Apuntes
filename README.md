@@ -371,3 +371,99 @@ body {
 
 /* Todos los elementos dentro de body heredarán estos estilos */
 ```
+
+### Composición: Márgenes, Bordes y Rellenos
+
+La composición de elementos en CSS se basa en el Box Model, que define cómo se estructura cada elemento HTML. Entender los márgenes, bordes y rellenos es fundamental para crear diseños precisos y bien organizados.
+
+#### El Box Model (Modelo de Caja)
+
+Cada elemento HTML es una caja rectangular compuesta por cuatro áreas:
+
+```
+┌─────────────────────────────────────┐
+│              MARGIN                 │
+│  ┌──────────────────────────────┐   │
+│  │           BORDER             │   │
+│  │  ┌────────────────────────┐  │   │
+│  │  │        PADDING         │  │   │
+│  │  │  ┌──────────────────┐  │  │   │
+│  │  │  │     CONTENT      │  │  │   │
+│  │  │  │                  │  │  │   │
+│  │  │  └──────────────────┘  │  │   │
+│  │  └────────────────────────┘  │   │
+│  └──────────────────────────────┘   │
+└─────────────────────────────────────┘
+```
+
+**Componentes:**
+1. **Content**: El área donde va el texto, imágenes, etc.
+2. **Padding**: Espacio entre el contenido y el borde
+3. **Border**: Línea que rodea el padding y el contenido
+4. **Margin**: Espacio exterior que separa el elemento de otros elementos
+
+#### Padding
+
+El padding es el espacio interno que existe entre el contenido de un elemento y su borde. Se utiliza para crear separación interna, evitando que el contenido quede pegado al borde y mejorando la legibilidad y la apariencia visual. Al aumentar el padding, el elemento ocupa más espacio en la pantalla, ya que este se suma al tamaño total del elemento. Es una propiedad usada en diseño web para organizar mejor la información y lograr interfaces más claras y agradables para el usuario.
+Ejemplo:
+
+```css
+/* Padding en los 4 lados */
+div {
+    padding: 20px; /* Todos los lados: 20px */
+}
+
+/* Padding individual por lado */
+div {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+```
+
+#### Border
+
+El border es la línea que rodea tanto el contenido como el padding de un elemento. Su función es delimitar visualmente el elemento dentro de la página. El borde puede personalizarse mediante distintos estilos (como sólido, punteado o discontinuo), diferentes grosores y una amplia variedad de colores, lo que permite resaltar elementos, separarlos de otros y mejorar la estructura visual del diseño.
+Ejemplo:
+
+```css
+div {
+    /* Propiedad individual */
+    border-width: 2px;        /* Grosor */
+    border-style: solid;      /* Estilo */
+    border-color: #333;       /* Color */
+}
+
+div {
+    /* Sintaxis abreviada (shorthand) */
+    border: 2px solid #333;   /* grosor | estilo | color */
+}
+```
+
+#### Margin (Margen)
+
+El margin es el espacio externo que rodea a un elemento y lo separa de otros elementos dentro de la página. A diferencia del padding y del border, el margin no forma parte del área visible del elemento y no tiene color de fondo, ya que es completamente transparente. Se utiliza para crear separación entre elementos, organizar mejor el diseño y evitar que los elementos queden demasiado juntos, mejorando así la estructura y la legibilidad de la interfaz.
+Ejemplo:
+
+```css
+/* Margin en los 4 lados */
+div {
+    margin: 20px; /* Todos los lados: 20px */
+}
+```
+
+#### Box-Sizing
+
+La propiedad `box-sizing` controla cómo se calcula el tamaño total de un elemento en CSS. Define si el ancho y alto especificados incluyen solo el contenido o también el padding y el borde. Gracias a esta propiedad, es posible manejar con mayor precisión el tamaño real de los elementos, facilitando el diseño y evitando problemas de desbordamiento o cálculos inesperados en la maquetación.
+
+Ejemplo:
+
+```css
+.caja {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    box-sizing: content-box; /* Valor por defecto */
+}
+```

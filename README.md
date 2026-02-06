@@ -89,10 +89,13 @@ Hecho todo esto, ya tendrás el commit enviado de tu local al GitHub.
 
 ## Markdown
 
-Markdown es un lenguaje de marcas ligero que permite crear documentos con formato de manera sencilla y legible. Se usa mucho en archivos README, documentación y foros.
+Markdown es un lenguaje de marcas ligero que se utiliza para dar formato a texto de manera sencilla y rápida, sin necesidad de usar etiquetas complejas como en HTML. Fue creado para que las personas pudieran escribir contenido con formato (títulos, listas, enlaces, código, etc.) usando solo texto plano, de una forma fácil de leer y de escribir.
 
-Ahora haré una explicación básica con sus respectivos ejemplos de etiquetas comunes:
-Encabezados
+A diferencia de HTML, Markdown no está pensado para navegadores. Su sintaxis es simple e intuitiva, lo que permite que el texto sea comprensible incluso antes de ser convertido o renderizado. Por ejemplo, un archivo Markdown puede leerse sin problemas en cualquier editor de texto.
+
+Markdown no reemplaza a HTML, sino que lo simplifica. De hecho, muchos sistemas convierten automáticamente Markdown en HTML para mostrarlo en la web.
+
+### Encabezados
 
 Se utilizan almohadillas `#` al inicio de la línea, seguidas de un espacio:
 ````markdown
@@ -157,7 +160,9 @@ Resultado:
 
 ## HTML
 
-HTML es el lenguaje de marcas estándar para crear páginas web. El lenguaje más importante de internet dado que sin HTML no se vería nada en el navegador.
+HTML (HyperText Markup Language) es el lenguaje estándar utilizado para crear y estructurar páginas web. Es la base de cualquier sitio web que se ve en Internet. Cada vez que se entra a una página, el navegador interpreta un documento HTML para mostrar textos, imágenes, enlaces, botones y otros elementos visuales.
+
+HTML no es un lenguaje de programación, ya que no ejecuta lógica ni cálculos. En lugar de eso, es un lenguaje de marcas, lo que significa que utiliza etiquetas para indicar al navegador qué tipo de contenido es cada parte del documento y cómo debe organizarse dentro de la página.
 
 ### Estructura básica
 ````html
@@ -176,7 +181,7 @@ HTML es el lenguaje de marcas estándar para crear páginas web. El lenguaje má
 
 ### Etiquetas de texto
 
-**Encabezados**: Van desde `<h1>` (más grande) hasta `<h6>` (más pequeño)
+**Encabezados**: Van desde `<h1>` que es el más grande hasta `<h6>` que es el más pequeño
 ````html
 <h1>Título principal</h1>
 <h2>Subtítulo</h2>
@@ -256,7 +261,21 @@ HTML es el lenguaje de marcas estándar para crear páginas web. El lenguaje má
 
 ## Introducción a CSS
 
+En los orígenes de la web, HTML era muy sencillo y fácil de aprender y no era capaz de representar recursos gráficos para añadir a la información textual. Eso fue cambiando a medida que el número de sitios web fueron creciendo y con ellos la cantidad de etiquetas que HTML se necesitaba para construir sitios cada vez más atractivos. Se tenían que incluir nuevas etiquetas destinadas a conseguir efectos visuales.
+
 CSS (Cascading Style Sheets) es el lenguaje que se utiliza para dar estilo y diseño a las páginas web creadas con HTML. Mientras HTML define la estructura y el contenido, CSS controla cómo se ve ese contenido.
+
+### Ventajas e inconvenientes
+
+Las ventajas de usar hojas de estilo son:
+
+- Posibilidad de mantener el código más fácilmente
+- A nivel de diseño, CSS es más potente que las etiquetas de diseño de (X)HTML
+- CSS es un lenguaje sencillo
+- Se pueden definir diferentes hojas de estilo para un solo documento (X)HTML, por ejemplo, un estilo para la página web cuando se visita desde un ordenador y otra para cuando queramos imprimirla
+- Se puede reutilizar desde diferentes documentos (X)HTML
+
+El único y mayor inconveniente es que no todos los navegadores se comportan de la misma forma ante una hoja de estilo dado que algunos no cumplen con los estándares establecidos. Así, obligan al programador a crear diferentes hojas de estilo.
 
 ### Características principales de CSS
 
@@ -270,15 +289,19 @@ CSS (Cascading Style Sheets) es el lenguaje que se utiliza para dar estilo y dis
 
 **CSS en línea (inline)** - Este CSS aparece justo en la etiqueta del HTML que se quiere cambiar:
 ```html
-Texto azul
+	<p style="color: blue; font-size: 16px;">Texto azul</p>
 ```
 
 **CSS interno** - Este CSS aparece en el head con la etiqueta `<style>`, es parecido al CSS externo pero este se encuentra en el HTML:
 ```html
-        p {
-            color: blue;
-            font-size: 16px;
-        }
+        <head>
+			<style>
+				p {
+					color: blue;
+					font-size: 16px;
+				}
+			</style>
+		</head>
 ```
 
 **CSS externo (archivo separado)** - Se crea un .css a parte y se enlaza desde el HTML:
@@ -288,21 +311,63 @@ Texto azul
 </head>
 
 ```
-### Box Model
 
-Todos los elementos HTML son cajas rectangulares compuestas por:
+### Prioridad
 
-- **Content**: El contenido del elemento (texto, imagen, etc.)
-- **Padding**: Espacio interior entre el contenido y el borde
-- **Border**: El borde de la caja
-- **Margin**: Espacio exterior que separa la caja de otros elementos
+La **prioridad** (también llamada **especificidad**) determina qué estilos se aplican cuando hay reglas CSS conflictivas que afectan al mismo elemento. Entender la prioridad es fundamental para escribir CSS mantenible y predecible.
+
+#### La Cascada
+
+La cascada determina qué regla se aplica cuando múltiples reglas coinciden con el mismo elemento, siguiendo este orden de prioridad de menor a mayor:
+
+1. Estilos del navegador
+2. Estilos del usuario
+3. Estilos del autor
+4. Estilos del autor con `!important`
+5. Estilos del usuario con `!important`
+
+#### Especificidad
+
+La especificidad es un sistema de puntuación que determina qué selector tiene más peso cuando hay conflicto. Se calcula como una combinación de cuatro valores: inline, IDs, Classes, Elements.
+
+##### Reglas de prioridad
+
+- **De mayor a menor prioridad:**
+
+1. **Estilos inline:** Son los estilos escritos directamente en el HTML, dentro del atributo `style=""`. Tienen la mayor prioridad porque están aplicados directamente al elemento.
+2. **IDs:** Se aplican a los elementos con un id específico (`#identificador`). Un id debe ser único en la página ya que sino dará errores o los estilos no aparecerán como el usuario desea
+3. **Classes, atributos y pseudo-clases:** (`.clase`, `[type="text"]`, `:hover`). Se usan mucho porque son reutilizables.
+4. **Elementos y pseudo-elementos** (`div`, `p`, `::before`). Son los selectores más generales.
+
+#### Regla de desempate: Orden en cascada
+
+En CSS, a veces dos o más reglas apuntan al mismo elemento y tienen exactamente la misma especificidad, es decir, pesan lo mismo.
+Cuando eso ocurre, CSS necesita una forma de decidir cuál aplicar.
+
+La regla que gana es la que aparece más tarde en el código.
+Un ejemplo:
 
 ```css
-div {
-    width: 200px;
-    padding: 10px;
-    border: 2px solid black;
-    margin: 20px;
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+.texto {
+    color: blue;
 }
+
+.texto {
+    color: red;    /* ← GANA porque está después */
+}
+```
+
+#### Herencia
+
+La herencia en CSS es un mecanismo que permite que algunas propiedades de estilo aplicadas a un elemento padre se transmitan automáticamente a sus elementos hijos, sin necesidad de volver a escribir esas reglas.
+
+CSS funciona como un árbol de elementos, donde cada elemento puede tener hijos. Cuando una propiedad es heredable, el navegador copia su valor del padre al hijo.
+
+```css
+body {
+    color: blue;
+    font-family: Arial;
+}
+
+/* Todos los elementos dentro de body heredarán estos estilos */
 ```
